@@ -5,6 +5,11 @@ import vue from '@vitejs/plugin-vue'
 export default defineConfig({
     plugins: [vue()],
     server: {
+        host: '0.0.0.0',
+        //need this for repl.it
+        hmr: {
+            port: 443,
+        },
         cors: true,
         "proxy": {
             "/api": {
@@ -14,7 +19,7 @@ export default defineConfig({
                 },
                 headers: {
                     "Cache-Control": "no-cache",
-                    "Authorization": "Basic ",
+                    "Authorization": "Basic c3VtbWVyb2Z0ZWNoYXBpOjlIajJLU3EzUDFTeg==",
                     "Connection": "keep-alive",
                     "Content-Type": "application/json",
                 },
