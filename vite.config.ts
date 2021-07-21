@@ -6,10 +6,10 @@ export default defineConfig({
     plugins: [vue()],
     server: {
         host: '0.0.0.0',
-        //need this for repl.it
-        // hmr: {
-        //     port: 443,
-        // },
+        // comment out hmr if developing on local computer
+        hmr: {
+            port: 443,
+        },
         cors: true,
         "proxy": {
             "/api": {
