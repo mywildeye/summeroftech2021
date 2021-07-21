@@ -7,9 +7,9 @@ export default defineConfig({
     server: {
         host: '0.0.0.0',
         //need this for repl.it
-        hmr: {
-            port: 443,
-        },
+        // hmr: {
+        //     port: 443,
+        // },
         cors: true,
         "proxy": {
             "/api": {

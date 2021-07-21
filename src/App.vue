@@ -35,6 +35,10 @@ export default defineComponent({
     onMounted(async () => {
       wildeye.sites.push(await query('op51065', new Date()))
       wildeye.sites.push(await query('op51025', new Date()))
+      setInterval(async () => {
+        wildeye.sites[0] = await query('op51065', new Date());
+        wildeye.sites[1] = await query('op51025', new Date());
+      }, 30000)
     });
     return{
       wildeye
