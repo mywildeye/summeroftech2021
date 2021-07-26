@@ -10,8 +10,8 @@ export interface Site {
   signal:                number;
   battery:               number;
   uploadFrequencyMinute: number;
-  nextTelemetry:         Date;
-  lastTelemetry:         Date;
+  nextTelemetry:         string;
+  lastTelemetry:         string;
   status:                string;
   inputs:                Input[];
 }
