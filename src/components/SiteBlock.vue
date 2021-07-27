@@ -33,11 +33,12 @@ export default defineComponent({
     const inputs = computed(() =>
         site.value.inputs.filter(i => i.name.startsWith('Air Temp')
             || i.name.startsWith('Wat')
+            || i.name.startsWith('Soil Moisture')
             || i.name.startsWith('Rela')))
     return {
       site,
       inputs,
-      lastConnection : computed(() => DateTime.fromISO(site.value.lastTelemetry))
+      lastConnection : computed(() => DateTime.fromISO(site.value.lastTelemetry)),
     }
   }
 
