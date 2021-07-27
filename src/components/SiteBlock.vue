@@ -1,5 +1,6 @@
 <template>
-  <div class="border border-solid p-3 rounded-md bg-gray-100 shadow-lg ">
+  <!-- add some transforms to bring a little life to the html https://tailwindcss.com/docs/transition-property  -->
+  <div class="border border-solid p-3 rounded-md bg-gray-100 shadow-lg hover:shadow-2xl hover:scale-110 sm:hover:scale-125 transition ease-in-out duration-400">
     <div class="font-bold text-center">{{ site.name }}</div>
     <div class="text-xs flex flex-col text-center shadow-inner shadow-lg bg-gray-200 rounded p-1">
       <div class="">Last Connection</div>

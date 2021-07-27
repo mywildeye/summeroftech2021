@@ -6,7 +6,7 @@
   <div class="fixed w-full h-full sm:h-3/4 sm:w-3/4 mx-auto inset-0 my-auto border border-solid shadow-2xl rounded-lg p-4 bg-gradient-to-r from-green-400 to-blue-500">
     <div class="flex flex-col">
       <div class="flex justify-evenly flex-col sm:flex-row ">
-        <div v-for="site in wildeye.sites" :key="site.id" class="mt-4">
+        <div v-for="site in wildeye.sites" :key="site.id" class="mt-4 ">
           <!-- SiteBlock is a component which is defined in components/SiteBlock.vue-->
           <!-- It takes a "prop" called site.  -->
           <!-- It binds the site object using the vue shorthand : which is the same as v-bind -->
