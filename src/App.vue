@@ -37,12 +37,14 @@ export default defineComponent({
     const since = ref<DateTime>(DateTime.now().minus({day:2}))
     onMounted(async () => {
       // add the sites initially...
-      wildeye.sites.push(await query('op51065', since.value))
-      wildeye.sites.push(await query('op51025', since.value))
+      for (const d of ['op51065', 'op51025', 'op53831']) {
+        wildeye.sites.push(await query(d, since.value));
+      }
       setInterval(async () => {
         // every 30 seconds update the sites...
-        wildeye.sites[0] = await query('op51065', since.value);
-        wildeye.sites[1] = await query('op51025', since.value);
+        for(let d of wildeye.sites){
+          Object.assign(d, await query(d.deviceId, since.value))
+        }
       }, 30000)
     });
     return {
